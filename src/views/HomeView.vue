@@ -1,18 +1,53 @@
-<script setup>
+<script>
 import Nav from '../components/Nav.vue';
 import Footer from '../components/Footer.vue';
+import ScrollReveal from 'scrollreveal';
+
+export default {
+  name: 'HomeView',
+  components: {Nav, Footer},
+  data() {
+    return {
+      fullText: 'I am a Web Developer',
+      typedText: ''
+    }
+  },
+  methods: {
+    typeWriter() {
+      let i = 0;
+      const typingInterval = setInterval(() => {
+        this.typedText += this.fullText[i];
+        i++;
+        if (i === this.fullText.length) {
+          clearInterval(typingInterval);
+        }
+      }, 200);
+    }
+  },
+  mounted() {
+    this.typeWriter();
+    
+    const sr = ScrollReveal();
+
+    sr.reveal('main', {delay: 500});
+    sr.reveal('#bottom', {delay: 500});
+    sr.reveal('footer', {delay: 500});
+  }
+}
 </script>
 
 <template>
+
   <Nav />
 
   <div id="banner">
     <div class="banner_wrap">
       <figure><img src="../images/banner_bg.jpg" alt="code"></figure>
       <div class="slogan">
-        <h2><span>Hello !</span> <strong>I Am</strong> Web Developer</h2>
-        <p>I'm a Web Developer with extensive experience for over 6 years.</p>
-        <ul>
+        <h4 class="animate__animated animate__fadeIn animate__delay-1s">Hello !</h4>
+        <h2><strong>{{ typedText }}</strong> <span>|</span></h2>
+        <p class="animate__animated animate__fadeIn animate__delay-2s">I'm a Web Developer with extensive experience for over 6 years.</p>
+        <ul class="animate__animated animate__fadeIn animate__delay-3s">
           <li><a href="javascript:;"><i class="bi bi-facebook"></i></a></li>
           <li><a href="javascript:;"><i class="bi bi-instagram"></i></a></li>
           <li><a href="javascript:;"><i class="bi bi-github"></i></a></li>
