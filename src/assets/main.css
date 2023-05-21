@@ -1,35 +1,99 @@
-@import './base.css';
+.nav_wrap {position: absolute; right: 75px;}
+img {max-width: 100%;}
+ul{list-style-type: none;padding: 0 !important;}
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* banner  */
+#banner {position: relative;}
+#banner::before{content: ''; background: rgba(0,0,0,0.5); width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
+.banner_wrap{display: flex; align-items: center;}
+.banner_wrap figure{margin: 0;}
+.slogan{position: absolute; color: #fff; left: 0; right: 0; margin: 0 auto; text-align: center;}
+.slogan ul{display: flex; justify-content: center; padding: 0;}
+.slogan ul li{margin: 0 12px;}
+.slogan li a{color: #fff; font-size: 30px;}
+.slogan li a:hover{opacity: 0.5;}
+.btm_box figure{position: relative;}
+.slogan h2{font-size: 40px;}
+.slogan h2 span{color: #555; background: #fff; width: 95px; display: block; margin: 0 auto 15px; font-size: 25px; border-radius: 4px;}
 
-  font-weight: normal;
+/* main */
+main{min-height: 600px;display: flex; align-items: center;}
+main ul{display: flex; flex-wrap: wrap; justify-content: space-between;padding: 0;}
+main ul li{width: 40%; margin: 12px 2px;}
+main h2{position: relative; margin-bottom: 20px;}
+main h2::after{content: ''; width: 80px; height: 5px; position: absolute; background: #555; bottom: -7px; left: 0;}
+main h4{margin: 15px 0 20px;}
+
+/* bottom */
+#bottom{background: #eee; min-height: 900px; text-align: center; display: flex;}
+#bottom .container{display: flex;align-items: center;}
+.btm_box{width: 100%;}
+.btm_box h2 span{display: block; background: #212529; color: #fff; width: 60px; padding: 4px 0; font-size: 11px; margin: 0 auto 3px; max-width: 100%; border-radius: 4px; text-transform: uppercase;}
+.btm_box p{width: 700px; margin: 0 auto 60px; max-width: 100%;position: relative;}
+.btm_box p::after{content: ''; width: 60px; height: 5px; position: absolute; background: #555; bottom: -10px; left: 0; right: 0; text-align: center; margin: 0 auto;}
+.btm_box ul{display: flex; justify-content: center; flex-wrap: wrap;}
+.btm_box ul li{margin: 0 10px;}
+.btm_box ul li a{background: #212529; color: #fff; text-decoration: none; display: block; padding: 5px 8px; border-radius: 30px; width: 110px; margin-bottom: 8px;}
+.btm_box ul li a:hover{opacity: 0.5;}
+.btm_box figure{position: relative;}
+.btm_box figure:hover{opacity: 0.5;}
+.btm_box figure a{position: absolute; top: 0; left: 0; display: block; width: 100%; height: 100%;}
+
+/* footer */
+footer .ftr_wrap{min-height: 600px;display: flex;align-items: center;}
+.ftr_box{width: 100%;}
+.ftr_box h2{text-align: center;}
+.ftr_box h2 span{display: block; background: #212529; color: #fff; width: 60px; padding: 4px 0; font-size: 11px; margin: 0 auto 3px; max-width: 100%; border-radius: 4px; text-transform: uppercase;}
+.ftr_box p{width: 700px; margin: 0 auto 70px; max-width: 100%;position: relative;text-align: center;}
+.ftr_box p::after{content: ''; width: 60px; height: 5px; position: absolute; background: #555; bottom: -10px; left: 0; right: 0; text-align: center; margin: 0 auto;}
+.copyright .container{display: flex; justify-content: space-between; flex-wrap: wrap; min-height: 50px; align-items: center; padding-top: 15px;}
+.copyright section{color: #fff;}
+.copyright section ul{display: flex;}
+.copyright section ul li a{color: #fff; margin: 0 8px; font-size: 20px;}
+.copyright section ul li a:hover{opacity: 0.5;}
+.ftr_box ul li{margin-bottom: 20px;}
+.ftr_box ul li span{display: block;}
+
+/* media */
+@media screen and (max-width: 1200px) {
+    #bottom{min-height: 0; padding: 55px 0;display: block;}
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+@media screen and (max-width: 800px) {
+    /* main */
+    main{display: block; min-height: 0;padding: 20px 0 40px;}
+    main .row{display: block;}
+    main .row div{width: 100%;}
+    main .row figure img{border-radius: 50%; width: 120px; height: 110px; box-shadow: 0px 0px 12px #555; margin: 20px auto 15px; display: block;}
+    main button{display: block !important; margin: 35px auto 0;}
+    main h2{text-align: center;margin-bottom: 40px;}
+    main h2::after{width: 50px;right: 0; margin: 0 auto;}
+    main h4{text-align: center;}
+
+    /* footer */
+    footer .ftr_wrap{min-height: 0; padding: 55px 15px; display: block;}
+    .copyright .container{flex-direction: column; line-height: 100%;text-align: center;}
+    .copyright .container p{margin: 0 !important;}
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+@media screen and (max-width: 600px) {
+    /* banner */
+    .banner_wrap{display: block;}
+    #banner::before{display: none;}
+    .slogan{position: static;color: unset; padding: 12px 6px; background: #fbfbfb;}
+    .slogan h2 span{background: none; border-radius: 0; color: unset; margin: 0; text-align: center; width: 100%;}
+    .slogan li a{color: #212529;}
+
+    /* main */
+    main ul{display: block;}
+    main ul li{width: 100%;}
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+@media screen and (max-width: 576px) {
+    .nav_wrap{position: static;}
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+@media screen and (max-width: 575px) {
+    /* footer */
+    footer ul{margin-top: 25px !important;}
 }
