@@ -1,5 +1,5 @@
 <template>
-    <footer>
+    <footer id="footer">
         <div class="container ftr_wrap">
             <div class="ftr_box">
                 <h2><span>Touch</span> Get in Touch</h2>

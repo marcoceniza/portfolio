@@ -8,22 +8,41 @@
             <div class="collapse navbar-collapse nav_wrap" id="mynavbar">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">Home</a>
+                        <a class="nav-link" @click.prevent="handleClick('banner')">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">About</a>
+                        <a class="nav-link" @click.prevent="handleClick('main')">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">Works</a>
+                        <a class="nav-link" @click="handleClick('bottom')">Works</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0)">Resume</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">Contact</a>
+                        <a class="nav-link" @click.prevent="handleClick('footer')">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 </template>
+
+<script>
+
+export default {
+    props: {
+        handleNavClick: {
+            type: Function,
+            required: true
+        }
+    },
+    methods: {
+        handleClick(sectionId) {
+            // Pass the sectionId to the handleNavClick function defined in the parent component
+            this.handleNavClick(sectionId);
+        }
+    }
+}
+
+</script>

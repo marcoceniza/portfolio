@@ -22,23 +22,30 @@ export default {
           clearInterval(typingInterval);
         }
       }, 200);
-    }
+    },
+    scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    },
   },
   mounted() {
     this.typeWriter();
-    
-    const sr = ScrollReveal();
+  
+    const srList = ['main', '#bottom', 'footer']
 
-    sr.reveal('main', {delay: 500});
-    sr.reveal('#bottom', {delay: 500});
-    sr.reveal('footer', {delay: 500});
+    srList.forEach(className => {
+      ScrollReveal().reveal(className, {delay: 500});
+    });
+    
   }
 }
 </script>
 
 <template>
 
-  <Nav />
+  <Nav :handleNavClick="scrollToSection" />
 
   <div id="banner">
     <div class="banner_wrap">
@@ -56,7 +63,7 @@ export default {
     </div>
   </div>
 
-  <main>
+  <main id="main">
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
