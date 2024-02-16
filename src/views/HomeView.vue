@@ -49,14 +49,15 @@
         <div class="row">
           <section class="col-4">
             <a href="https://mc-todo23.netlify.app/" target="_blank">Simple Todo App &raquo;</a>
-            <figure><img src="../assets/images/btm_img3.jpg" alt="phone"></figure>
+            <figure><img src="../assets/images/btm_img.jpg" alt="phone"></figure>
           </section>
           <section class="col-4">
-            <a href="https://reservation23.netlify.app/" target="_blank">Simple Reservation App &raquo;</a>
+            <a href="https://mc-reservation23.netlify.app/" target="_blank">Reservation System &raquo;</a>
             <figure><img src="../assets/images/btm_img2.jpg" alt="laptop"></figure>
           </section>
           <section class="col-4">
-            <figure><img src="../assets/images/comingsoon.jpg" alt="Coming Soon"></figure>
+            <a href="https://mc-library24.netlify.app/" target="_blank">Library System &raquo;</a>
+            <figure><img src="../assets/images/btm_img3.jpg" alt="library"></figure>
           </section>
           <section class="col-4">
             <figure><img src="../assets/images/comingsoon.jpg" alt="Coming Soon"></figure>
