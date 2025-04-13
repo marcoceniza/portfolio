@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* general */
+.wrapper{ width:1200px; max-width:100%; position:relative; overflow:hidden; }
+.textColor {
+    background: linear-gradient(to right, rgba(18, 224, 243, 1), rgba(19, 184, 82, 1));
+    -moz-background: linear-gradient(to right, rgba(18, 224, 243, 1), rgba(19, 184, 82, 1));
+    -webkit-background: linear-gradient(to right, rgba(18, 224, 243, 1), rgba(19, 184, 82, 1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bgColor { background:linear-gradient(to right,rgba(18,224,243,1),rgba(19,184,82,1)); }
+.toggle{ position:fixed; left:0; right:0; margin:0 auto; top:0; z-index:3; }
+
+/* banner */
+#banner section h2 strong:after {content: ''; width: 70px; height: 7px; position: absolute; background: linear-gradient(to right, #B0FCB0, #12E0F3); left: 0; bottom: -25px;}
+#banner section h2 span {animation: blink .5s step-end infinite alternate;}
+@keyframes blink{ 0% {opacity:0} 50% {opacity:1} }
+
+/* main */
+main section h2:after {content: ''; width: 70px; height: 7px; position: absolute; background: linear-gradient(to right, #B0FCB0, #12E0F3); left: 0; bottom: -25px;}
+
+/* bottom */
+#bottom h2:after {content: ''; width: 70px; height: 7px; position: absolute; background: linear-gradient(to right, #B0FCB0, #12E0F3); left: 0; bottom: -25px; right: 0; margin: 0 auto;}
+#bottom .project_wrap figure:before {content:'';background:rgba(0,0,0,0.3);position:absolute;top:0;left:0;width:320px;z-index:1;height:100%;max-width:100%;border-radius: 5px;}
+#bottom .project_wrap figure a {color:#fff;position:absolute;left:0;right:0;height:100%;display:flex;justify-content:center;align-items:center;bottom:0;z-index:2;}
+#bottom .project_wrap figure a:hover{background:rgba(0,0,0,0.5);border-radius: 5px;}
+
+/* footer */
+footer h2:after {content: ''; width: 70px; height: 7px; position: absolute; background: linear-gradient(to right, #B0FCB0, #12E0F3); left: 0; bottom: -25px; right: 0; margin: 0 auto;}
