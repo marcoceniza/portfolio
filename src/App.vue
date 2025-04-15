@@ -12,7 +12,7 @@ const { scrollToSection } = useCustomStore();
     <div class="wrapper flex justify-between items-center mx-auto px-4 min-h-[65px]">
       <RouterLink to="/" class="textColor text-white cursor-pointer font-bold text-[35px]">MC</RouterLink>
       <nav>
-        <ul class="flex text-white gap-5">
+        <ul class="flex text-white gap-5 max-md:text-[14px]">
           <li><span class="cursor-pointer hover:underline" @click="$router.push('/'); scrollToSection('banner')">HOME</span></li>
           <li><span class="cursor-pointer hover:underline" @click="$router.push('/'); scrollToSection('main')">ABOUT</span></li>
           <li><span class="cursor-pointer hover:underline" @click="$router.push('/'); scrollToSection('bottom')">WORKS</span></li>
