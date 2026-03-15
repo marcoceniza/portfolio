@@ -1,10 +1,12 @@
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import { defineStore } from 'pinia';
 
 export const useCustomStore = defineStore('custom', () => {
     const fullText = ref('WEB DEVELOPER');
     const typedText = ref('');
     const toggleNavbar = ref(false);
+    const windowWidth = ref(window.innerWidth);
+    const isMenuOpen = ref(false);
 
     const typeWriter = () => {
         let i = 0;
@@ -18,7 +20,6 @@ export const useCustomStore = defineStore('custom', () => {
             }
         }, 200);
     }
-
 
     const scrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
@@ -38,5 +39,25 @@ export const useCustomStore = defineStore('custom', () => {
         }
     });
 
-    return { scrollToSection, fullText, typedText, toggleNavbar, typeWriter }
+    const updateWidth = () => {
+        windowWidth.value = window.innerWidth;
+    };
+
+    const showHamburger = computed(() => windowWidth.value <= 640);
+
+    const toggleMenu = () => {
+        isMenuOpen.value = !isMenuOpen.value;
+    };
+
+    return {
+        scrollToSection,
+        fullText,
+        typedText,
+        toggleNavbar,
+        typeWriter,
+        toggleMenu,
+        showHamburger,
+        isMenuOpen,
+        updateWidth
+    }
 })
