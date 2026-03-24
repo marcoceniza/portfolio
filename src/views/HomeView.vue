@@ -52,7 +52,7 @@ onMounted(() => {
           <button class="bg-gradient-to-r from-[#12E0F3] to-[#13B852] mt-[50px] block w-[220px] h-[50px] text-[#313131] text-[19px] font-bold rounded-[4px] max-md:mx-auto">Download Resume</button>
         </section>
         <section class="w-[25%] max-md:hidden">
-            <figure><img src="../images/main_img3.jpg" alt="Vite"></figure>
+            <figure><img class="object-cover h-[300px] rounded-xl" src="../images/main_img4.jpg" alt="Vite"></figure>
         </section>
     </div>
   </main>
@@ -64,8 +64,8 @@ onMounted(() => {
         <h2 class="bg-gradient-to-r from-[#12E0F3] to-[#13B852] bg-clip-text text-transparent text-[30px] font-bold block relative leading-[100%]">My Works</h2>
         <p class="text-white mt-[40px] mb-[50px] mx-auto w-[600px] max-w-full max-sm:w-full">Throughout my career as a web developer, I have created several simple sample projects, which I would like to share.</p>
         <div class="flex justify-center gap-4 relative project_wrap max-md:flex-wrap max-sm:flex-col">
-            <figure class="min-h-[320px] w-[320px] max-w-full relative max-md:w-[250px] max-md:min-h-0 max-sm:w-[250px] max-sm:min-h-[250px] max-sm:mx-auto"><img src="../images/main_img2.jpg" alt="todo app" class="rounded-[5px] h-full w-full block"><a class="cursor-not-allowed">View Project &raquo;</a></figure>
-            <figure class="min-h-[320px] w-[320px] max-w-full relative max-md:w-[250px] max-md:min-h-0 max-sm:w-[250px] max-sm:min-h-[250px] max-sm:mx-auto"><img src="../images/main_img3.png" alt="todo app" class="rounded-[5px] h-full w-full block"><a class="cursor-not-allowed">View Project &raquo;</a></figure>
+            <figure class="min-h-[320px] w-[320px] max-w-full relative max-md:w-[250px] max-md:min-h-0 max-sm:w-[250px] max-sm:min-h-[250px] max-sm:mx-auto"><img src="../images/main_img2.jpg" alt="todo app" class="rounded-[5px] h-full w-full block object-cover"><a href="https://mc-dev.site/todo/" class="cursor-pointer" target="_blank">View Project &raquo;</a></figure>
+            <figure class="min-h-[320px] w-[320px] max-w-full relative max-md:w-[250px] max-md:min-h-0 max-sm:w-[250px] max-sm:min-h-[250px] max-sm:mx-auto"><img src="../images/main_img3.jpg" alt="todo app" class="rounded-[5px] h-full w-full block object-cover"><a href="https://mc-dev.site/image-converter/" class="cursor-pointer" target="_blank">View Project &raquo;</a></figure>
         </div>
       </div>
     </div>
@@ -88,7 +88,7 @@ onMounted(() => {
         <button class="mt-[35px] bg-gradient-to-r from-[#12E0F3] to-[#13B852] block w-[175px] h-[50px] text-[#313131] text-[19px] font-bold rounded-[4px]">Send Message</button>
       </div>
     </div>
-    <p class="bg-[#595959] text-white py-[12px] px-[4px] text-center">CopyRight &copy; {{ new Date().getFullYear() }} Marco Ceniza All Rights Reserved</p>
+    <p class="bg-[#595959] text-white py-[12px] px-[4px] text-[14px] text-center">CopyRight &copy; {{ new Date().getFullYear() }} Marco Ceniza All Rights Reserved</p>
   </footer>
   
 </template>
